@@ -15,7 +15,9 @@ export default function Home() {
 
 
       <HeroSlider />
-      <LatestMovies />
+      <LatestMovies title={'Latest Movies'} margin={'mt-5'} />
+      <LatestMovies title={'Horror Movies'} />
+      <LatestMovies title={'Popular Movies'} />
 
     </div>
   )

@@ -10,19 +10,22 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import Link from 'next/link';
-const LatestMovies = () => {
+
+
+const LatestMovies = ({ title, margin }) => {
+
     return (
-        <section>
+        <section className={margin}>
             <div className='mx-auto px-2 sm:px-6 lg:px-28'>
-                <div className='section_head_row'><h2 class="section_title"> Latest Movies </h2></div>
-                <div className='py-8'>
+                <div className='section_head_row'>
+                    <h2 class="section_title"> {title}</h2>
+                </div>
+                <div className='movie_card_list'>
                     <Swiper
                         slidesPerView={6}
                         spaceBetween={30}
                         loop={true}
-                        pagination={{
-                            clickable: true,
-                        }}
+                        pagination={false}
                         navigation={true}
                         modules={[Pagination, Navigation]}
                         className="listSwiper"
