@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Autoplay, EffectFade, Pagination, Navigation } from "swiper";
 const HeroSlider = () => {
     return (
         <>
@@ -16,11 +16,10 @@ const HeroSlider = () => {
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
-                pagination={{
-                    clickable: true,
-                }}
+                pagination={false}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Autoplay, EffectFade, Pagination, Navigation]}
+                effect="fade"
                 className="mySwiper"
             >
                 <SwiperSlide><img src='/sanddust2.jpg'></img></SwiperSlide>

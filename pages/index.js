@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import HeroSlider from '../components/home/HeroSlider'
-import LatestMovies from '../components/home/LatestMovies'
+import HorrorMovie from '../components/home/HorrorMovie'
+import MovieofTheYear from '../components/home/MovieofTheYear'
+import PopularMovie from '../components/home/PopularMovie'
+import RecomendedMovie from '../components/home/RecomendedMovie'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ movies }) {
+  console.log(movies)
   return (
     <div className={styles.container}>
       <Head>
@@ -13,12 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       <HeroSlider />
-      <LatestMovies title={'Latest Movies'} margin={'mt-5'} />
-      <LatestMovies title={'Horror Movies'} />
-      <LatestMovies title={'Popular Movies'} />
-
+      <PopularMovie />
+      <HorrorMovie />
+      <MovieofTheYear />
+      <RecomendedMovie />
     </div>
   )
 }
