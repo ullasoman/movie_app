@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, EffectFade, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
 const HeroSlider = () => {
     return (
         <>
@@ -18,7 +18,7 @@ const HeroSlider = () => {
                 loop={true}
                 pagination={false}
                 navigation={true}
-                modules={[Autoplay, EffectFade, Pagination, Navigation]}
+                modules={[Pagination, Navigation]}
                 effect="fade"
                 className="mySwiper"
             >
