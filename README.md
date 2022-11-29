@@ -2,7 +2,7 @@
 
 ## A statically generated movie website example using Next.js and tailwind css
 
-This example showcases Next.js's Static Generation feature and deployed it on vercel.
+This is a Movies App built using Next.js, React and [The Movie Database (TMDB)](https://www.themoviedb.org/) API (Development is ongoing).
 
 ## Deploy on Vercel
 
@@ -10,7 +10,7 @@ A [live deployment](https://movie-app-five-blond.vercel.app/) of this app is ava
 
 ## Installation 
 
-Clone and install the dependencies for `next-movies` locally:
+Clone and install the dependencies for `movie-app` locally:
 
 ```bash 
   git clone https://github.com/ullasoman/movie_app.git
@@ -27,6 +27,15 @@ Clone and install the dependencies for `next-movies` locally:
 * `npm run netlify-deploy`: deploy to netlify 
 * `npm run analyze`: bundle analysis 
 * (`analyze:server` and `analyze:browser` are available too)
+
+## Tech Stack
+
+Built with:
+
+* Next.js
+* Tailwind CSS
+* Swiper Js
+
 
 ## Deploy on Vercel
 
