@@ -5,16 +5,28 @@
 This example showcases Next.js's Static Generation feature and deployed it on vercel.
 
 ## Deploy on Vercel
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
 
-## Learn More
+A [live deployment](https://movie-app-five-blond.vercel.app/) of this app is available to try it out.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Clone and install the dependencies for `next-movies` locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash 
+  git clone https://github.com/ullasoman/movie_app.git
+  cd movie_app 
+  npm install
+```
+## Running locally
+
+* `npm run dev`: dev build
+* `npm run build`: production build
+* `npm run static-build`: production static build
+* `npm run start`: start the project
+* `npm run vercel-deploy`: deploy to vercel
+* `npm run netlify-deploy`: deploy to netlify 
+* `npm run analyze`: bundle analysis 
+* (`analyze:server` and `analyze:browser` are available too)
 
 ## Deploy on Vercel
 
