@@ -2,7 +2,12 @@
 
 ## A statically generated movie website example using Next.js and tailwind css
 
-This is a Movies App built using Next.js, React and [The Movie Database (TMDB)](https://www.themoviedb.org/) API (Development is ongoing).
+This is a Movies App built using Next.js, React and [The Movie Database (TMDB)](https://www.themoviedb.org/) API (Development is ongoing).The main goal was to dive deep into the NextJS framework with the following constaints/features:
+
+- **SSR (Server Side Rendering)**: use NextJS to Server Side render the page with the data retrieved from the API and have a transparent client side navigation
+  - **critical-path CSS**: extracting critical CSS is made easy using a CSS-in-JS library like styled-component
+- **SEO friendly**: server side render meta tags relative to content based on API result
+- **Social Media cards friendly**: server side render meta tags relative to twitter/facebook ... to customize thumbnails/description when page is shared (also works for slack, messenger, WhatsApp ...)
 
 ## Deploy on Vercel
 
@@ -28,6 +33,13 @@ Clone and install the dependencies for `movie-app` locally:
 * `npm run analyze`: bundle analysis 
 * (`analyze:server` and `analyze:browser` are available too)
 
+## Quick setup
+
+1. Take a copy of .env file
+2. Get your TMDb API key
+3. Get your TMDB API read access token
+4. Enter the details into the .env.local file
+
 ## Tech Stack
 
 Built with:
@@ -36,6 +48,13 @@ Built with:
 * Tailwind CSS
 * Swiper Js
 
+### TODO
+
+- [ ] Integrate TMDB API by using [SWR](https://swr.vercel.app/) (React Hooks for Data Fetching)
+- [ ] Search movie by movie title.
+- [ ] Paginate movie list
+- [ ] View movie detail
+- [ ] Get recommendations
 
 ## Deploy on Vercel
 

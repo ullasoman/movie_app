@@ -1,5 +1,9 @@
 import React from 'react'
 import MovieCard from './MovieCard'
+import useSWR from 'swr';
+import fetcher from '../../lib/fetcher';
+import Spinner from '../../components/_child/spinner';
+import Error from '../../components/_child/error';
 
 const Movies = [
     { id: 1, name: '/latest-movies/movie-01.jpg' },
@@ -13,7 +17,33 @@ const Movies = [
 ]
 
 export default function PopularMovie() {
+
+    const { data, isLoading, isError } = fetcher('popular')
+
+    if (isLoading) return <Spinner></Spinner>
+    if (isError) return <Error></Error>
+
+
+    if (isError) return <div>Something went wrong</div>
+    if (!isLoading) return <div>data not found!</div>
+    console.log(data)
     return (
-        <MovieCard title={'Popular Movies'} Movies={Movies} />
+        <>
+            {
+                (data || []).map((value, index) => (
+                    <Post data={value} key={index}></Post>
+                ))
+            }
+        </>
+    )
+}
+
+
+function Post({ data }) {
+    const { id, backdrop_path, original_title } = data;
+
+    return (
+        <MovieCard key={id} title={'Popular Movies'} id={id} backdrop_path={backdrop_path} original_title={original_title} />
+
     )
 }
