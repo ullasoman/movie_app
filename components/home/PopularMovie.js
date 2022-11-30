@@ -23,10 +23,7 @@ export default function PopularMovie() {
     if (isLoading) return <Spinner></Spinner>
     if (isError) return <Error></Error>
 
-
-    if (isError) return <div>Something went wrong</div>
-    if (!isLoading) return <div>data not found!</div>
-    console.log(data)
+    if (data) console.log('result= ' + data)
     return (
         <>
             {
